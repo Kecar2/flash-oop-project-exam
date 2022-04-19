@@ -21,7 +21,9 @@ Vue.createApp({
             }
         }
     },
+
     methods: {
+      
         onAddQuestion() {
             // Queda muy explícita que estamos en modo 'añadir nueva nota'
             this.formMode = FORM_MODE.add;
@@ -44,6 +46,7 @@ Vue.createApp({
             this.notes = this.notes.filter(n => note.id != n.id)
         }
     },
+    
     computed:
     {
         // En qué casos tenemos que mostrar el formulario?
@@ -51,6 +54,7 @@ Vue.createApp({
             return this.formMode == FORM_MODE.add;
         }
     },
+    
 
 
 
